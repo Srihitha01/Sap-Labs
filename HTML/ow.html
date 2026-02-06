@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Domino's Owner Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ow.css">
+<script src="ow.js" defer>
+  
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Dominos_pizza_logo.svg" class="logo">
+        <h2>Owner Dashboard</h2>
+    </div>
+</header>
+
+<h1>📦 Orders Overview</h1>
+
+<div class="table-container">
+    <table id="ordersTable">
+       <thead>
+    <tr>
+        <th>Order ID</th>
+        <th>Items Ordered</th>
+        <th>Total Price</th>
+        <th>Order Time</th>
+        <th>Action</th>
+    </tr>
+</thead>
+
+        <tbody id="ordersBody"></tbody>
+    </table>
+
+    <div id="emptyMsg" class="no-order"></div>
+</div>
+<div id="ownerLoginBtn" onclick="window.location.href='logind.html'">Customer Login</div>
+
+
+
+
+</body>
+</html>
+
+
+
+

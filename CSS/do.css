@@ -1,0 +1,134 @@
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(120deg,#1e3c72,#2a5298);
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#0b3d91;
+}
+
+.cart-badge{
+    background:red;
+    border-radius:50%;
+    padding:5px 10px;
+    font-size:14px;
+}
+
+.logo{ height:45px; }
+
+.section-title{
+    padding-left:20px;
+    margin-top:20px;
+    font-size:22px;
+    color:#ffd700;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    position: relative; /* For overlay */
+    overflow: hidden;
+    background:white;
+    color:black;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    border-radius:10px;
+    display:block;
+}
+
+/* Overlay on image only */
+.card .img-container{
+    position: relative;
+}
+
+.card .img-container::after {
+    content: attr(data-desc);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    color:#fff;
+    font-size:14px;
+    line-height:1.4;
+    padding:10px;
+    border-radius:10px;
+    opacity:0;
+    pointer-events:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition: opacity 0.3s ease;
+}
+
+.card .img-container:hover::after {
+    opacity:1;
+}
+
+button{
+    background:#e31837;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.cart{
+    background:white;
+    color:black;
+    margin:20px;
+    padding:15px;
+    border-radius:12px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    margin:5px 0;
+}
+
+.qty-btn{
+    padding:2px 6px;
+    margin:0 3px;
+}
+
+#ownerLoginBtn {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background: #d62300;
+    color: white;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}

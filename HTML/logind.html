@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domino's Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="logind.css">
+<script src="logind.js" defer>
+  
+</script>
+  
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Dominos_pizza_logo.svg" alt="Logo">
+    <h1>Domino's Login</h1>
+
+    <form id="loginForm">
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Password</label>
+      <input type="password" id="password" required>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" required> I agree to the Terms & Conditions
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="user-btn" onclick="loginUser()">Login as User</button>
+        <button type="button" class="customer-btn" onclick="loginCustomer()">Login as Customer</button>
+      </div>
+    </form>
+  </div>
+
+  
+</body>
+</html>
+
+
+
+

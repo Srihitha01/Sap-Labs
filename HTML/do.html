@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Domino's Deluxe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="do.css">
+<script src="do.js" defer>
+  
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <div style="display:flex;align-items:center;gap:10px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Dominos_pizza_logo.svg" class="logo">
+        <h1>Dominos Deluxe Menu</h1>
+    </div>
+    <div>🛒 Cart <span class="cart-badge" id="badge">0</span></div>
+</header>
+
+<h2 class="section-title">🍕 Pizzas</h2>
+<section class="menu" id="pizzaMenu"></section>
+
+<h2 class="section-title">🥤 Beverages</h2>
+<section class="menu" id="drinkMenu"></section>
+
+<h2 class="section-title">🍰 Desserts</h2>
+<section class="menu" id="dessertMenu"></section>
+
+<h2 class="section-title">🔥 Combos</h2>
+<section class="menu" id="comboMenu"></section>
+
+<div class="cart">
+<h3>Your Cart</h3>
+<div id="cartItems"></div>
+<h3>Total: ₹<span id="total">0</span></h3>
+<button onclick="checkout()">Proceed to Order</button>
+</div>
+
+<div id="ownerLoginBtn" onclick="window.location.href='logind.html'">Owner Login</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="success-container" *ngIf="items.length > 0; else empty">
+
+  <h1>🎉 Order Placed Successfully!</h1>
+
+  <p><strong>Order ID:</strong> {{ orderId }}</p>
+  <p><strong>Order Time:</strong> {{ orderTime }}</p>
+  <p><strong>Payment Method:</strong> {{ paymentMethod }}</p>
+
+  <div *ngFor="let item of items" class="item-card">
+    <h3>{{ item.name }}</h3>
+    <p>₹ {{ item.price }} × {{ item.quantity }}</p>
+  </div>
+
+  <h2 class="total">Total Paid: ₹{{ total }}</h2>
+
+  <button routerLink="/menu">Back to Menu</button>
+
+</div>
+
+<ng-template #empty>
+  <h2>No Order Found</h2>
+</ng-template>

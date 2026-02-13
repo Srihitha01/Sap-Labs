@@ -1,0 +1,26 @@
+ <div *ngIf="message" class="success-msg">
+  {{ message }}
+</div>
+
+<h2 class="main-title">Our Signature Delights 🍦</h2>
+
+<div *ngFor="let section of menuSections" class="section">
+
+  <h2 class="section-title">{{ section.category }}</h2>
+
+  <div class="menu-container">
+
+    <div class="card" *ngFor="let product of section.items">
+      <img [src]="product.image" alt="{{ product.name }}" />
+
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+
+      <button (click)="addToCart(product)">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+</div>

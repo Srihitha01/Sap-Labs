@@ -1,0 +1,28 @@
+<div class="hero">
+  <div class="overlay">
+    <div class="form-container">
+      <h2>Register</h2>
+      <form (ngSubmit)="register()">
+        <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name" required>
+        <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name" required>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <input type="text" [(ngModel)]="mobile" name="mobile" placeholder="Mobile Number" required>
+        <input type="text" [(ngModel)]="address" name="address" placeholder="Address" required>
+        <select [(ngModel)]="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="date" [(ngModel)]="dob" name="dob" placeholder="Date of Birth" (change)="calculateAge()">
+        <input type="text" [(ngModel)]="age" name="age" placeholder="Age" readonly>
+
+        <button type="submit">Register</button>
+        <button type="button" class="reset" (click)="resetForm()">Reset</button>
+      </form>
+      <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+    </div>
+  </div>
+</div>

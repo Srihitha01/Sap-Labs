@@ -1,0 +1,26 @@
+<div class="contact-page">
+
+  <h2 class="main-title">Contact Us 📬</h2>
+
+  <div *ngIf="successMessage" class="success-msg">{{ successMessage }}</div>
+
+  <form (ngSubmit)="sendMessage()" class="contact-form">
+    <label>
+      Name
+      <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name" required />
+    </label>
+
+    <label>
+      Email
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Your Email" required />
+    </label>
+
+    <label>
+      Message
+      <textarea [(ngModel)]="message" name="message" placeholder="Your Message" required></textarea>
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</div>

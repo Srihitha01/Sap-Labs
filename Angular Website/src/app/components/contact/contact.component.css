@@ -1,0 +1,71 @@
+.contact-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 36px;
+  color: #e91e63;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff4e8a, #ff8ab4);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+.success-msg {
+  text-align: center;
+  background: linear-gradient(45deg, #ff4e8a, #ff8ab4);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
